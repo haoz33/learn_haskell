@@ -36,11 +36,11 @@ add 2 3
 
 ## Loop
 
-In Haskell there is no tradiational loop like for loop, but we can use recursion to achieve the same outcome as loop. 
+In Haskell there is no traditional loop like for loop in other languages, but we can use recursion to achieve the same result as loop. 
 
 Recursion is where a function call itself inside the body of that function. 
 
-### Exmaple of recursion 
+### Example of recursion 
 
 ```haskell 
 hello_worlds n = do
@@ -61,5 +61,5 @@ hello_worlds n = do
         hello_worlds (n - 1)
 ```
 
-From the above code, we can see that pattern matching is done with specific the function name following by the parameter and body, the specified pararmeter is passed the body will executed instead of the original function body. 
+From the above code, we can see that pattern matching is done with specific the function name following by the parameter and body, the specified parameter is passed the body will executed instead of the original function body. 
 
