@@ -66,7 +66,44 @@ f n arr = [num | num <- arr, a <- [1 .. n]]
 ```
 
 # Another way to solve
+
 ```haskell
 f :: Int -> [Int] -> [Int]
 f n arr = concat (map (\x -> replicate n x) arr)
 ```
+
+In this solution we have used 3 functions to achieve effect of replicate a list.
+
+`concat`
+
+concat turns list of list into a flat list
+```haskell
+concat [[1,2,3],[4,5,6]]
+> [1,2,3,4,5,6]
+```
+
+`map`
+
+map transform a list into another list by appling a given function 
+
+```haskell
+map abs [-1,2,-3]
+> [1,2,3]
+```
+
+with the use of lamda function we can achieve more complicated transformation
+
+```haskell
+map (\x -> x + 2) [-1,2,-3]
+> [1,4,-1]
+```
+
+`replicate`
+
+replicate creates a list of replicated items. It takes two argument, repeat times, and the item need to be repeated.
+
+```haskell
+replicate 3 5 
+> [5,5,5]
+```
+
