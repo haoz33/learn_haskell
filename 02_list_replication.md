@@ -91,7 +91,7 @@ map abs [-1,2,-3]
 > [1,2,3]
 ```
 
-with the use of lamda function we can achieve more complicated transformation
+with the use of lambda function we can achieve more complicated transformation
 
 ```haskell
 map (\x -> x + 2) [-1,2,-3]
