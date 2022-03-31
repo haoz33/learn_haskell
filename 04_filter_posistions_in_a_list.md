@@ -22,7 +22,15 @@ zip [0,1,2] [1,2,3]
 `fst` and `snd` is a way to retrive a value from tuple, `fst` returns first item in the tuple, `snd` returns the second item in a tuple.
 
 
+## filter with tuple
 ```haskell
-f lst = filter ( (\x -> odd x) zip [0..] lst)
+filter (\x -> odd (fst x) ) [(1,5),(2,6),(3,7)]
+> [(1,5),(3,7)]
+```
 
+
+# Soultion
+```haskell
+f lst = map (\x -> snd x) (filter (\x -> odd (fst x) ) (zip [0..] lst))
+> [5,7]
 ```
