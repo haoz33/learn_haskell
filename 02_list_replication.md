@@ -64,3 +64,9 @@ for i in range(1,3):
 f :: Int -> [Int] -> [Int]
 f n arr = [num | num <- arr, a <- [1 .. n]]
 ```
+
+# Another way to solve
+```haskell
+f :: Int -> [Int] -> [Int]
+f n arr = concat (map (\x -> replicate n x) arr)
+```
